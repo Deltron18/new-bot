@@ -7,15 +7,8 @@ dotenv.config();
 
 const app = express();
 
-// ✅ Update CORS to allow only your frontend domain
-app.use(
-  cors({
-    origin: "https://your-frontend-domain.com", // replace with your deployed frontend link
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
-
+// Allow all origins (you can restrict it to your frontend domain if needed)
+app.use(cors());
 app.use(express.json());
 
 app.post("/api/generate-image", async (req, res) => {
