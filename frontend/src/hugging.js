@@ -3,7 +3,7 @@
 
 // hugging.js
 export async function query(prompt) {
-  const response = await fetch("http://localhost:5000/api/generate-image", {
+  const response = await fetch("https://new-bot-b.vercel.app/api/generate-image", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ prompt }),
