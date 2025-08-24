@@ -8,10 +8,7 @@ dotenv.config();
 const app = express();
 
 // Allow all origins (you can restrict it to your frontend domain if needed)
-app.use(cors({
-  origin: "https://new-bot-sigma-swart.vercel.app",
-  credentials: true,
-}));
+app.use(cors());
 app.use(express.json());
 
 app.post("/api/generate-image", async (req, res) => {
